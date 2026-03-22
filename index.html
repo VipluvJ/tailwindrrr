@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chai Tailwind Engine Test</title>
+
+    <!-- Kickstart the Engine -->
+    <script type="module">
+      import startEngine from "./src/startEngine.js";
+      startEngine();
+    </script>
+  </head>
+
+  <!-- Let's test everything! -->
+  <body class="bg-slate-900 text-white p-8">
+    <div class="max-w flex flex-col items-center justify-center h-full">
+      <!-- Test 1: Static (flex-col, items-center), Dynamic (p-4, rounded, bg-red-500) -->
+      <div class="p-8 rounded-lg bg-red-500 text-center">
+        <h1 class="font-bold text-2xl">JIT Engine Works!</h1>
+      </div>
+
+      <!-- Test 2: Hover variant -->
+      <button
+        class="mt-8 px-4 py-2 rounded-md bg-primary-500 hover:bg-slate-100 hover:text-black"
+      >
+        Hover Me
+      </button>
+
+      <!-- Test 3: Responsive variant (Changes color on medium screens) -->
+      <div class="mt-8 p-4 rounded bg-slate-500 md:bg-primary-500">
+        I am gray on mobile, blue on desktop.
+      </div>
+
+      <!-- Test 4: Arbitrary values -->
+      <div class="mt-8 w-[250px] border-[3px] border-white p-[2_rem]">
+        Arbitrary Values Work
+      </div>
+    </div>
+  </body>
+</html>
