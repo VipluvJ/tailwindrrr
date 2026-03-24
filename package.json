@@ -1,6 +1,6 @@
 {
   "name": "tailwindrrr",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A zero-build-step, JIT utility CSS engine.",
   "main": "./index.js",
   "type": "module",
